@@ -45,6 +45,8 @@ elif blendervr.is_console():
         def __init__(self, console):
             global try_wait_user_name, try_chooser, try_console_arc_balls
             super(Processor, self).__init__(console)
-
+            
+        #The useLoader() determines if you need Blender-VR to modify your .blend 
+        #on-the-fly to work with Blender-VR. The exception is when the file being loaded was already modified to work with Blender-VR (e.g., the file generated on-the-fly after running it once).
         def useLoader(self):
             return True
